@@ -1,0 +1,40 @@
+$footer-font-size: 24px;
+
+@mixin article-card($color, $border-color, $font-size) {
+  color: $color;
+  border: $border-color;
+  font-size: $font-size;
+}
+h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+}
+div {
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  section {
+    margin: 1rem;
+    display: flex;
+    text-align: center;
+    p {
+      padding: 1.5rem;
+    }
+
+    article {
+      @include article-card(red, 1px solid green, 1rem);
+    }
+
+    article:nth-child(odd) {
+      color: blue;
+    }
+
+    #footer {
+      font-size: $footer-font-size;
+      color: green;
+      border: 1px solid blue;
+    }
+  }
+}
