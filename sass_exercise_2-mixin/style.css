@@ -1,34 +1,41 @@
-h1 {
-  color: green;
-  border-bottom: 1px solid blue;
-}
-
-div {
+body {
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+body div {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-div section {
   margin: 1rem;
+  width: 100%;
+}
+body div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+}
+body div section {
+  padding: 1rem;
+  width: 100%;
   display: flex;
   text-align: center;
 }
-div section p {
-  padding: 1.5rem;
-}
-div section article {
+body div section article {
   color: red;
   border: 1px solid green;
   font-size: 1rem;
 }
-div section article:nth-child(odd) {
+body div section article p {
+  padding: 1.5rem;
+}
+body div section article:nth-child(odd) {
   color: blue;
 }
-div section #footer {
-  font-size: 24px;
+body div section #footer {
   color: green;
   border: 1px solid blue;
+  font-size: 24px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
