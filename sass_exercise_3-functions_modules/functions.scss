@@ -1,0 +1,10 @@
+$color: red;
+$border-color: 1px solid green;
+$font-size: rem(15px);
+
+
+@function rem($number) {
+  $value: calc($number/ 16px) + rem;
+
+  @return $value;
+}

@@ -1,0 +1,41 @@
+body {
+  border: 0.125rem solid red;
+  display: flex;
+  justify-content: center;
+}
+body div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100%;
+}
+body div h1 {
+  color: green;
+  border-bottom: 1px solid blue;
+}
+body div section {
+  padding: 0.625rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+body div section article {
+  color: red;
+  border: 1px solid green;
+  font-size: rem(15px);
+}
+body div section article p {
+  padding: 0.625rem;
+}
+body div section article:nth-child(odd) {
+  color: blue;
+}
+body div section #footer {
+  color: green;
+  border: 0.125rem solid blue;
+  font-size: rem(15px);
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
