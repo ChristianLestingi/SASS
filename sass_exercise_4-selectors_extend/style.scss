@@ -20,6 +20,12 @@ body {
       color: green;
       border-bottom: 1px solid blue;
     }
+    h2{
+      @extend h1 ;
+      padding: 1rem;
+      border-color: red;
+
+    }
 
     section {
       padding: f.rem(16px);
@@ -32,16 +38,21 @@ body {
         color: f.$color;
         border: f.$border-color;
         font-size: f.rem(16px);
+        
+        &.article_blue {
+          color: blue;
+        }
+
+
 
         p {
           padding: f.rem(10px);
         }
       }
 
-      article:nth-child(odd) {
-        color: blue;
-      }
-      #footer {
+
+
+       #footer {
         color: green;
         border: f.rem(2px) solid blue;
         font-size: $footer-font-size;
