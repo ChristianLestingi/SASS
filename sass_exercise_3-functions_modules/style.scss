@@ -1,6 +1,8 @@
 @use "functions.scss" as f;
 
-$footer-font-size: f.rem(10px);
+
+
+  $footer-font-size: f.rem(20px);
 
 body {
   border: f.rem(2px) solid red;
@@ -11,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 1rem;
+    margin: f.rem(10px);
     width: 100%;
 
     h1 {
@@ -20,7 +22,7 @@ body {
     }
 
     section {
-      padding: f.rem(10px);
+      padding: f.rem(16px);
       width: 100%;
 
       display: flex;
@@ -29,7 +31,7 @@ body {
       article {
         color: f.$color;
         border: f.$border-color;
-        font-size: f.$font-size;
+        font-size: f.rem(16px);
 
         p {
           padding: f.rem(10px);
@@ -42,7 +44,7 @@ body {
       #footer {
         color: green;
         border: f.rem(2px) solid blue;
-        font-size: f.$font-size;
+        font-size: $footer-font-size;
         width: 100%;
       }
     }
