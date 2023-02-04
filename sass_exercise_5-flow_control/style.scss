@@ -1,8 +1,32 @@
 @use "functions.scss" as f;
 
+$footer-font-size: f.rem(20px);
+$background-color: white;
+$font-color: #000000;
 
+@for $var from 1 to 20 {
+  section div:nth-child(#{$var}) {
+    background-color: darken($background-color, $var * 5%);
+    color: lighten($font-color, $var * 5%);
+  }
 
-  $footer-font-size: f.rem(20px);
+  @if $var == 10 {
+    section div:nth-child(#{$var}) {
+      background-color: blue;
+      color: red;
+    }
+  }
+}
+$sizes: 1, 2, 3;
+
+@each $size in $sizes {
+  .fs-#{$size}rem {
+    border: 1px solid red;
+    font-size: 0.1rem + $size;
+    display: flex;
+    align-items: flex-start;
+  }
+}
 
 body {
   border: f.rem(2px) solid red;
@@ -20,19 +44,23 @@ body {
       color: green;
       border-bottom: 1px solid blue;
     }
-    h2{
-      @extend h1 ;
+    h2 {
+      @extend h1;
       padding: 1rem;
       border-color: red;
-
     }
 
     section {
       padding: f.rem(16px);
       width: 100%;
-
+      justify-content: center;
       display: flex;
       text-align: center;
+      div {
+        width: f.rem(45px);
+        height: f.rem(45px);
+        border: 1px solid;
+      }
 
       article {
         color: f.$color;
@@ -43,16 +71,12 @@ body {
           color: blue;
         }
 
-
-
         p {
           padding: f.rem(10px);
         }
       }
 
-
-
-       #footer {
+      #footer {
         color: green;
         border: f.rem(2px) solid blue;
         font-size: $footer-font-size;
