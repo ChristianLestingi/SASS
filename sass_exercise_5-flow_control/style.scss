@@ -1,0 +1,63 @@
+@use "functions.scss" as f;
+
+
+
+  $footer-font-size: f.rem(20px);
+
+body {
+  border: f.rem(2px) solid red;
+  display: flex;
+  justify-content: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: f.rem(10px);
+    width: 100%;
+
+    h1 {
+      color: green;
+      border-bottom: 1px solid blue;
+    }
+    h2{
+      @extend h1 ;
+      padding: 1rem;
+      border-color: red;
+
+    }
+
+    section {
+      padding: f.rem(16px);
+      width: 100%;
+
+      display: flex;
+      text-align: center;
+
+      article {
+        color: f.$color;
+        border: f.$border-color;
+        font-size: f.rem(16px);
+
+        &.article_blue {
+          color: blue;
+        }
+
+
+
+        p {
+          padding: f.rem(10px);
+        }
+      }
+
+
+
+       #footer {
+        color: green;
+        border: f.rem(2px) solid blue;
+        font-size: $footer-font-size;
+        width: 100%;
+      }
+    }
+  }
+}
